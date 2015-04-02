@@ -33,7 +33,6 @@ Install and start mongoDB. (http://www.mongodb.org)
 
 #### 5. Capture Image
 
-	http://localhost:3000
 ![Alt text](https://cloud.githubusercontent.com/assets/1298497/6959631/09e7fe04-d956-11e4-856f-da7ac07418e9.PNG "Optional title")
 
 
