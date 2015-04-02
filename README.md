@@ -35,6 +35,7 @@ Install and start mongoDB. (http://www.mongodb.org)
 
 ![Alt text](https://cloud.githubusercontent.com/assets/1298497/6959631/09e7fe04-d956-11e4-856f-da7ac07418e9.PNG "Optional title")
 
+![Alt text](https://cloud.githubusercontent.com/assets/1298497/6959750/02204cca-d957-11e4-820e-e215268e20f2.PNG "Optional title")
 
 
 ## License
