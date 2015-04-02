@@ -1,0 +1,124 @@
+<%layout('../layout')%>
+<div id="page-wrapper">
+    <div class="row">
+        <div class="col-lg-12">
+            <h1 class="page-header">BBS</h1>
+        </div>
+        <!-- /.col-lg-12 -->
+    </div>
+    <!-- /.row -->
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="panel panel-default">
+                <div class="panel-body">
+                    <h3>CRUD Example</h3>
+                    <p>Ajax crud</p>
+                    <div class="table-responsive">
+                        <table class="table table-bordered table-striped">
+                            <thead>
+                                <tr>
+                                    <th></th>
+                                    <th>
+                                        Content
+                                    </th>
+                                    <th>
+                                        Vote
+                                    </th>
+                                    <th>
+                                        User
+                                    </th>
+                                    <th>
+                                        Date
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody id="tb">
+                                
+                            </tbody>
+                        </table>
+                    </div>
+                   
+                </div>
+            </div>
+        </div>
+        <!-- /.col-lg-12 -->
+    </div>
+    <!-- /.row -->
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    Basic Form Elements
+                </div>
+                <div class="panel-body">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <form role="form">
+                                <div class="form-group">
+                                    <label>Text Input</label>
+                                    <input class="form-control" id="content">
+                                    <p class="help-block">Leave your message.</p>
+                                </div>
+                               
+                                
+                                <a href="#" id="savebbs" class="btn btn-lg btn-success btn-block">Save</a>
+                            </form>
+                        </div>
+                      
+                        <!-- /.col-lg-6 (nested) -->
+                    </div>
+                    <!-- /.row (nested) -->
+                </div>
+                <!-- /.panel-body -->
+            </div>
+            <!-- /.panel -->
+        </div>
+        <!-- /.col-lg-12 -->
+    </div>
+    <!-- /.row -->
+    
+
+</div>
+<!-- /#page-wrapper -->
+
+<script>
+    $(document).ready(function(){
+        $('#savebbs').click(function(){
+            $.post("/bbs/create"
+                  ,{content:$('#content').val()}
+                  ,function(result){
+                    getList();
+                  })
+        })
+        getList();
+    })
+
+
+    function getList(){
+        $.get("/bbs/list"
+                  ,{}
+                  ,function(result){
+                    var tb = $('#tb');
+                    tb.html("");
+                    $.each(result,function(a,b){
+                        var html ="<tr><td><button type='button' class='btn btn-warning btn-circle' onclick='delBbs(\""+b._id+"\")'><i class='fa fa-times'></i></button></td><td>"+b.content+"&nbsp;&nbsp;<button type='button' class='btn btn-danger btn-circle' onclick='vote(\""+b._id+"\")'><i class='fa fa-heart'></i></button></td><td>"+b.vote+"</td><td>"+b.username+"</td><td>"+b.date+"</td></tr>";
+                        tb.append(html);
+                    })
+                  })
+    }
+
+    function delBbs(id){
+         $.post("/bbs/delete"
+                  ,{id:id}
+                  ,function(result){
+                    getList();
+              })
+    }
+    function vote(id){
+         $.post("/bbs/update"
+                  ,{id:id}
+                  ,function(result){
+                    getList();
+              })
+    }
+</script>

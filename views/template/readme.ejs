@@ -1,0 +1,224 @@
+<%layout('../layout')%>
+<div id="page-wrapper">
+    <div class="row">
+        <div class="col-lg-12">
+            <h1 class="page-header">README.md</h1>
+        </div>
+        <!-- /.col-lg-12 -->
+    </div>
+
+     <!-- /.row -->
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="jumbotron">
+                <h1>SB Admin v2.0 Node.js</h1>
+                <p>Famous bootstrap template(free) + Node.js + mongoDB</p>
+                <p>Offer sign up & login & logout</p>
+                <p>Offer sample CRUD page</p>
+            </div>
+        </div>
+        <!-- /.col-lg-12 -->
+    </div>
+    <!-- /.row -->
+
+    <div class="row">
+        <div class="col-lg-4">
+            <div class="well">
+                <h4>express</h4>
+                <p>express(ejs engine) for web mvc framework</p>
+            </div>
+        </div>
+        <!-- /.col-lg-4 -->
+        <div class="col-lg-4">
+            <div class="well well-lg">
+                <h4>ejs-locals</h4>
+                <p>ejs-locals for UI template</p>
+            </div>
+        </div>
+        <!-- /.col-lg-4 -->
+        <div class="col-lg-4">
+            <div class="well well-sm">
+                <h4>mongoose</h4>
+                <p>mongoose for managing mongoDB</p>
+            </div>
+        </div>
+        <!-- /.col-lg-4 -->
+    </div>
+    <div class="row">
+    	<!-- /.col-lg-4 -->
+        <div class="col-lg-4">
+            <div class="well well-lg">
+                <h4>passport</h4>
+                <p>passport for authentication & authorization</p>
+            </div>
+        </div>
+        <!-- /.col-lg-4 -->
+
+        <div class="col-lg-4">
+            <div class="well">
+                <h4>bcrypt-nodejs</h4>
+                <p>bcrypt-nodejs for password encryption</p>
+            </div>
+        </div>
+        
+        <div class="col-lg-4">
+            <div class="well well-sm">
+                <h4>CRUD example page</h4>
+                <p>CRUD example page for quick development</p>
+            </div>
+        </div>
+        <!-- /.col-lg-4 -->
+    </div>
+    <!-- /.row -->
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    Requirement And Install guide
+                </div>
+                <!-- .panel-heading -->
+                <div class="panel-body">
+                    <div class="panel-group" id="accordion">
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                <h4 class="panel-title">
+                                    <a data-toggle="collapse" data-parent="#accordion"  href="#collapseOne">Node.js</a>
+
+                                </h4>
+                            </div>
+                            <div id="collapseOne" class="panel-collapse collapse in">
+                                <div class="panel-body">
+                                    Download <a href="https://nodejs.org/download" target="_blank">https://nodejs.org/download</a> and install
+                                    <br/>
+                                    Open command window and run command  > node --version
+                                    <br/>
+                                    Check your node.js version
+                                </div>
+                            </div>
+                        </div>
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                <h4 class="panel-title">
+                                    <a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">mongoDB</a>
+                                </h4>
+                            </div>
+                            <div id="collapseTwo" class="panel-collapse collapse">
+                                <div class="panel-body">
+                                    Download <a href="http://www.mongodb.org/downloads?_ga=1.231428054.874147034.1427762568" target="_blank">http://www.mongodb.org/downloads</a> and install
+                                    <br/>
+                                    Make directory YOUR_MONGODB_PATH/data/db
+                                    <br/>
+                                    Run command > YOUR_MONGODB_PATH/bin/mongod --dbpath ../data/db
+                                </div>
+                            </div>
+                        </div>
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                <h4 class="panel-title">
+                                    <a data-toggle="collapse" data-parent="#accordion" href="#collapseThree">Run SB Admin 2.0 Node.js</a>
+                                </h4>
+                            </div>
+                            <div id="collapseThree" class="panel-collapse collapse">
+                                <div class="panel-body">
+                                	Run command > cd node-sbadmin
+                                    <br/>
+                                    Run command > npm install
+                                    <br/>
+                                    Run command > node ./bin/www
+                                    <br/>
+                                    Your server is running on http://localhost:3000
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- .panel-body -->
+            </div>
+            <!-- /.panel -->
+        </div>
+        <!-- /.col-lg-12 -->
+    </div>
+    <!-- /.row -->
+    <!-- /.row -->
+    <div class="row">
+        <!-- /.col-lg-4 -->
+        <div class="col-lg-4">
+            <div class="panel panel-primary">
+                <div class="panel-heading">
+                    /passport/pass.js
+                </div>
+                <div class="panel-body">
+                    <p>passport module for authentication & authorization</p>
+                </div>
+            </div>
+        </div>
+        <!-- /.col-lg-4 -->
+        <div class="col-lg-4">
+            <div class="panel panel-primary">
+                <div class="panel-heading">
+                    /routes/index.js
+                </div>
+                <div class="panel-body">
+                    <p>routing module for mvc</p>
+                </div>
+                
+            </div>
+        </div>
+        <!-- /.col-lg-4 -->
+        <div class="col-lg-4">
+            <div class="panel panel-primary">
+                <div class="panel-heading">
+                    /persister/user.js
+                </div>
+                <div class="panel-body">
+                    <p>mongoose user model</p>
+                </div>
+                
+            </div>
+        </div>
+       
+    </div>
+    
+    <!-- /.row -->
+    <div class="row">
+        <!-- /.col-lg-4 -->
+        <div class="col-lg-4">
+            <div class="panel panel-primary">
+                <div class="panel-heading">
+                    /config.json
+                </div>
+                <div class="panel-body">
+                    <p>mongodb address config</p>
+                </div>
+            </div>
+        </div>
+        <!-- /.col-lg-4 -->
+        <div class="col-lg-4">
+            <div class="panel panel-primary">
+                <div class="panel-heading">
+                    /layout.ejs
+                </div>
+                <div class="panel-body">
+                    <p>set layout ejs UI template </p>
+                </div>
+                
+            </div>
+        </div>
+        <!-- /.col-lg-4 -->
+        <div class="col-lg-4">
+            <div class="panel panel-primary">
+                <div class="panel-heading">
+                    /template
+                </div>
+                <div class="panel-body">
+                    <p>*.ejs UI templates</p>
+                </div>
+                
+            </div>
+        </div>
+        
+       
+    </div>
+    
+</div>
+<!-- /#page-wrapper -->
