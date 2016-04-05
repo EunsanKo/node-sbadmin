@@ -1,0 +1,21 @@
+{
+  "name": "swagger-simple",
+  "version": "0.0.1",
+  "description": "",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components"
+  ],
+  "dependencies": {
+    "bootstrap": "~3.3.2",
+    "bootstrap-social": "~4.8.0",
+    "datatables": "~1.10.4",
+    "morris.js": "0.5.1",
+    "Flot": "flot#^0.8.3",
+    "flot.tooltip": "^0.8.7",
+    "datatables-plugins": "^1.10.11",
+    "metisMenu": "^2.4.3"
+  }
+}
